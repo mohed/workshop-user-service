@@ -1,0 +1,11 @@
+name: workshop-user-service
+memory: 256Mi
+cpu: 200m
+min-instances: 1
+platform:
+  gke:
+    connectivity: external
+    domain-mappings:
+      staging:
+        - workshop-user-service.retailsvc.dev
+    opa-enabled: false
